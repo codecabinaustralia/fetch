@@ -1,0 +1,2 @@
+class YellowPage < ApplicationRecord
+end

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Yellow Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Business name</th>
+      <th>Business category</th>
+      <th>Business logo</th>
+      <th>Business tagline</th>
+      <th>Business phone</th>
+      <th>Business email</th>
+      <th>Business website</th>
+      <th>Business home city</th>
+      <th>Business state</th>
+      <th>Business postal code</th>
+      <th>Business about</th>
+      <th>Business services</th>
+      <th>Business association</th>
+      <th>Business opporating hours</th>
+      <th>Business products</th>
+      <th>Business brands</th>
+      <th>Business features</th>
+      <th>Business keywords</th>
+      <th>Business review</th>
+      <th>Business review name</th>
+      <th>Business review star</th>
+      <th>Business faqs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yellow_pages.each do |yellow_page| %>
+      <tr>
+        <td><%= yellow_page.business_name %></td>
+        <td><%= yellow_page.business_category %></td>
+        <td><%= yellow_page.business_logo %></td>
+        <td><%= yellow_page.business_tagline %></td>
+        <td><%= yellow_page.business_phone %></td>
+        <td><%= yellow_page.business_email %></td>
+        <td><%= yellow_page.business_website %></td>
+        <td><%= yellow_page.business_home_city %></td>
+        <td><%= yellow_page.business_state %></td>
+        <td><%= yellow_page.business_postal_code %></td>
+        <td><%= yellow_page.business_about %></td>
+        <td><%= yellow_page.business_services %></td>
+        <td><%= yellow_page.business_association %></td>
+        <td><%= yellow_page.business_opporating_hours %></td>
+        <td><%= yellow_page.business_products %></td>
+        <td><%= yellow_page.business_brands %></td>
+        <td><%= yellow_page.business_features %></td>
+        <td><%= yellow_page.business_keywords %></td>
+        <td><%= yellow_page.business_review %></td>
+        <td><%= yellow_page.business_review_name %></td>
+        <td><%= yellow_page.business_review_star %></td>
+        <td><%= yellow_page.business_faqs %></td>
+        <td><%= link_to 'Show', yellow_page %></td>
+        <td><%= link_to 'Edit', edit_yellow_page_path(yellow_page) %></td>
+        <td><%= link_to 'Destroy', yellow_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yellow Page', new_yellow_page_path %>

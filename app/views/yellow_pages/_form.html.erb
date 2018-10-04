@@ -1,0 +1,127 @@
+<%= form_with(model: yellow_page, local: true) do |form| %>
+  <% if yellow_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(yellow_page.errors.count, "error") %> prohibited this yellow_page from being saved:</h2>
+
+      <ul>
+      <% yellow_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :business_name %>
+    <%= form.text_field :business_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_category %>
+    <%= form.text_field :business_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_logo %>
+    <%= form.text_field :business_logo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_tagline %>
+    <%= form.text_field :business_tagline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_phone %>
+    <%= form.text_field :business_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_email %>
+    <%= form.text_field :business_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_website %>
+    <%= form.text_field :business_website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_home_city %>
+    <%= form.text_field :business_home_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_state %>
+    <%= form.text_field :business_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_postal_code %>
+    <%= form.text_field :business_postal_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_about %>
+    <%= form.text_area :business_about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_services %>
+    <%= form.text_area :business_services %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_association %>
+    <%= form.text_area :business_association %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_opporating_hours %>
+    <%= form.text_area :business_opporating_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_products %>
+    <%= form.text_area :business_products %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_brands %>
+    <%= form.text_area :business_brands %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_features %>
+    <%= form.text_area :business_features %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_keywords %>
+    <%= form.text_area :business_keywords %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_review %>
+    <%= form.text_area :business_review %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_review_name %>
+    <%= form.text_field :business_review_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_review_star %>
+    <%= form.text_field :business_review_star %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_faqs %>
+    <%= form.text_area :business_faqs %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
